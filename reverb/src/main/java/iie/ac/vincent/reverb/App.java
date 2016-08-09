@@ -20,8 +20,7 @@ import edu.washington.cs.knowitall.nlp.extraction.ChunkedBinaryExtraction;
 public class App {
 	public static void main(String[] args) throws Exception {
 		Connection conn = null;
-		String url = "jdbc:mysql://127.0.0.1:3306/test?"
-                + "user=root&password=123456&useUnicode=true&characterEncoding=UTF8";
+		String url = "jdbc:mysql://127.0.0.1:3306/test?" + "user=root&password=123456&useUnicode=true&characterEncoding=UTF8";
 		Class.forName("com.mysql.jdbc.Driver");
 		conn = DriverManager.getConnection(url);
 		String sql = "insert into triple(arg1,rel,arg2) values(?,?,?)";
@@ -44,6 +43,8 @@ public class App {
 		ConfidenceFunction confFunc = new ReVerbOpenNlpConfFunction();
 		int i = 1;
 		String temp = "";
+		String deleteSql = "truncate table triple";
+		pstmt.executeUpdate(deleteSql);
 		for (ChunkedBinaryExtraction extr : reverb.extract(sent)) {
 			double conf = confFunc.getConf(extr);
 			temp += "Sentence" + i + "\n";

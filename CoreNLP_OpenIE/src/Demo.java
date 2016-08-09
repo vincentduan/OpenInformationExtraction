@@ -46,7 +46,8 @@ public class Demo {
 		props.setProperty("annotators",
 				"tokenize,ssplit,pos,lemma,depparse,natlog,openie");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
-
+		String deleteSql = "truncate table triple";
+		pstmt.executeUpdate(deleteSql);
 		// Annotate an example document.
 
 		// Fixed

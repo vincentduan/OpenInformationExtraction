@@ -20,15 +20,17 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.30</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>edu.washington.cs.knowitall</groupId>
 			<artifactId>reverb-core</artifactId>
 			<version>1.4.1</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

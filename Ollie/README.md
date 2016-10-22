@@ -3,7 +3,9 @@
 * Open IE 3.0 used to be known as [Ollie](http://knowitall.github.io/ollie/).
 
 #Example
-     sentence : President Obama will meet with Congressional leaders on Friday, and House Republicans summoned lawmakers back for a Sunday session, in a last-ditch effort to avert a fiscal crisis brought on by automatic tax increases and spending cuts scheduled to hit next week.
+     sentence : 
+     President Obama will meet with Congressional leaders on Friday, and House Republicans summoned lawmakers back for a Sunday session, in a last-ditch effort to avert a fiscal crisis brought on by automatic tax increases and spending cuts scheduled to hit next week.
+     
      extraction : 
      (House Republicans; will summoned lawmakers back for; a Sunday session)
 	 (House Republicans; will summoned lawmakers back in; a last-ditch effort to avert a fiscal crisis brought on by automatic tax increases and spending cuts)

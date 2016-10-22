@@ -1,6 +1,6 @@
 # CoreNLP
 * Stanford CoreNLP provides a set of natural language analysis tools. It can give the base forms of words, their parts of speech, whether they are names of companies, people, etc., normalize dates, times, and numeric quantities, and mark up the structure of sentences in terms of phrases and word dependencies, indicate which noun phrases refer to the same entities, indicate sentiment, extract open-class relations between mentions, etc.
-
+[More Info](http://stanfordnlp.github.io/CoreNLP/index.html)
 #JDK1.8
 
 #Example

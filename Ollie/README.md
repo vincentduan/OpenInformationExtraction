@@ -1,6 +1,6 @@
 # OLLIE
 * Ollie is software that automatically identifies and extracts binary relationships from English sentences. Ollie is designed for information extraction, where the target relations cannot be specified in advance and speed is important.
-* Open IE 2.0 is also known as [Ollie](http://knowitall.github.io/ollie/).
+* Open IE 3.0 is also known as [Ollie](http://knowitall.github.io/ollie/).
 
 #JDK1.7
 

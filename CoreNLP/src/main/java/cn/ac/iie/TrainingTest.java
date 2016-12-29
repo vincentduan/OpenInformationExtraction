@@ -5,6 +5,11 @@ import java.util.Properties;
 import edu.stanford.nlp.pipeline.Annotation;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> af2f42f58f43482c337b5f9bdabe332185cbdf32
 public class TrainingTest {
 	public static void main(String[] args) {
 		String props = "StanfordCoreNLP-chinese.properties";

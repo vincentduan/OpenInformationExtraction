@@ -1,0 +1,2 @@
+Bachelor of Arts	Person
+Bachelor of Laws	Person

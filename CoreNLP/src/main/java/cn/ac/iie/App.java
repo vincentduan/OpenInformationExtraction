@@ -19,8 +19,7 @@ public class App {
 	public static void main(String[] args) {
 		// Create the Stanford CoreNLP pipeline
 		Properties props = new Properties();
-		props.setProperty("annotators",
-				"tokenize,ssplit,pos,lemma,depparse,natlog,openie");
+		props.setProperty("annotators", "tokenize,ssplit,pos,lemma,depparse,natlog,openie");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);
 		String sentence2 = "President Obama will meet with Congressional leaders on Friday, and House Republicans summoned lawmakers back for a Sunday session, in a last-ditch effort to avert a fiscal crisis brought on by automatic tax increases and spending cuts scheduled to hit next week.";
 		Annotation document = new Annotation(sentence2);

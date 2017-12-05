@@ -12,6 +12,7 @@ import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 public class AppNer {
 	public static void main(String[] args) {
 		Properties props = new Properties();
+		//props.put("annotators", "tokenize, ssplit, pos, lemma, ner, regexner");
 		props.put("annotators", "tokenize, ssplit, pos, lemma, ner, regexner");
 		//props.put("regexner.mapping", "cn/ac/iie/jg-regexner.txt");
 		StanfordCoreNLP pipeline = new StanfordCoreNLP(props);

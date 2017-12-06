@@ -13,9 +13,9 @@ import java.util.Properties;
  */
 public class TestServer {
     public static void main(String[] args) {
-        /*Properties props = new Properties();
-        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");*/
-        String props = "StanfordCoreNLP-chinese.properties";
+        Properties props = new Properties();
+        props.setProperty("annotators", "tokenize, ssplit, pos, lemma, ner, parse, dcoref");
+        //String props = "StanfordCoreNLP-chinese.properties";
         StanfordCoreNLPClient pipeline = new StanfordCoreNLPClient(props, "http://localhost", 9000, 2);
 // read some text in the text variable
         String text ="金正恩的父亲是金正日"; // Add your text here!

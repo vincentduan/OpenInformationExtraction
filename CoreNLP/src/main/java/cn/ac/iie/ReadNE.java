@@ -10,10 +10,11 @@ import java.util.*;
 
 public class ReadNE {
     public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new FileReader("D:/test/NE.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("D:/test/NE_17777.txt"));
         String s = null;
         Map<String, Integer> person = new HashMap<>();
         Map<String, Integer> org = new HashMap<>();
+        int top = 10;
         while ((s = br.readLine()) != null) {
             JSONObject dataJson = JSON.parseObject(s);
             JSONArray sentences = dataJson.getJSONArray("sentences");
@@ -40,8 +41,8 @@ public class ReadNE {
                                     break;
                                 }
                             }
-                            if(org.putIfAbsent(word, 1)!=null){
-                                org.compute(word, (k, v)-> v+1);
+                            if(person.putIfAbsent(word, 1)!=null){
+                                person.compute(word, (k, v)-> v+1);
                             }
                         }else{
                             word_num_per--;
@@ -74,14 +75,16 @@ public class ReadNE {
         }
         List<Map.Entry<String, Integer>> personlist = new ArrayList<>(person.entrySet());
         Collections.sort(personlist, (o1, o2) -> (o2.getValue() - o1.getValue()));
-        List<Map.Entry<String, Integer>> orglist = new ArrayList<>(person.entrySet());
+        List<Map.Entry<String, Integer>> orglist = new ArrayList<>(org.entrySet());
         Collections.sort(orglist, (o1, o2) -> (o2.getValue() - o1.getValue()));
 //        person.forEach((k, v)-> System.out.println("k:"+k+",v:"+v));
 //        org.forEach((k, v)-> System.out.println("k:"+k+",v:"+v));
-        for(int i = 0;i<10;i++){
+        System.out.println("person top 10:");
+        for(int i = 0;i<top;i++){
             System.out.println(personlist.get(i).getKey()+","+personlist.get(i).getValue());
         }
-        for(int i = 0;i<10;i++){
+        System.out.println("org top 10:");
+        for(int i = 0;i<top;i++){
             System.out.println(orglist.get(i).getKey()+","+orglist.get(i).getValue());
         }
     }

@@ -23,7 +23,7 @@ public class App
     private MaltParser maltParser;
 
     // the path of the malt parser model file
-    private static final String MALT_PARSER_FILENAME = "engmalt.linear-1.7.mco";
+    private static final String MALT_PARSER_FILENAME = "C://engmalt.linear-1.7.mco";
 
     public App() throws MalformedURLException {
     	 // initialize MaltParser

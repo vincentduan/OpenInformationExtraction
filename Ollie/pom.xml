@@ -35,4 +35,23 @@
 			<scope>test</scope>
 		</dependency>
   </dependencies>
+	<build>
+		<plugins>
+			<!-- Used for creating a single executable fat jar -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>cn.ac.iie.App</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

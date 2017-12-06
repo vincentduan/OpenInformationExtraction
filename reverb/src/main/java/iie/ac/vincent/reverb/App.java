@@ -25,7 +25,7 @@ public class App {
 		conn = DriverManager.getConnection(url);
 		String sql = "insert into triple(arg1,rel,arg2) values(?,?,?)";
 		PreparedStatement  pstmt  = conn.prepareStatement(sql);
-		FileInputStream file_in = new FileInputStream("D://nlp//Hillary.txt");
+		FileInputStream file_in = new FileInputStream("D://Hillary.txt");
 		//FileInputStream file_in = new FileInputStream("D://nlp//Hillary.txt");
 		//FileInputStream file_in = new FileInputStream("D://nlp//input.txt");
 		int in_size = file_in.available();
@@ -44,21 +44,21 @@ public class App {
 		int i = 1;
 		String temp = "";
 		String deleteSql = "truncate table triple";
-		pstmt.executeUpdate(deleteSql);
+		//pstmt.executeUpdate(deleteSql);
 		for (ChunkedBinaryExtraction extr : reverb.extract(sent)) {
 			double conf = confFunc.getConf(extr);
 			temp += "Sentence" + i + "\n";
 			temp += conf + "\t" + extr.getArgument1() + "\t"
 					+ extr.getRelation() + "\t" + extr.getArgument2() + "\n" + "\n";
-			pstmt.setString(1, extr.getArgument1()+"");
+			/*pstmt.setString(1, extr.getArgument1()+"");
 			pstmt.setString(2, extr.getRelation()+"");
 			pstmt.setString(3, extr.getArgument2()+"");
-			pstmt.execute();
+			pstmt.execute();*/
 			i++;
 		}
 		// Output to File
 		FileOutputStream file_out = new FileOutputStream(
-				"D://nlp//triple_out2.txt");
+				"D://triple_out2.txt");
 		byte[] data = temp.getBytes();
 		file_out.write(data);
 		file_out.close();
